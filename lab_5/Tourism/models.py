@@ -11,7 +11,7 @@ class Camp(models.Model):
     geography = models.TextField(verbose_name='Расположение лагеря')
 
     def __str__(self):
-        return str(self.name)
+        return f"Лагерь: {self.name}"
 
 
 class Instructor(models.Model):
