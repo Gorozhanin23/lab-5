@@ -1,0 +1,39 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <title>Туризм - Главная страница</title>
+</head>
+
+<body class="bg-dark">
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/admin">
+            <img alt="" class="d-inline-block align-text-top" height="33" src="{% static 'camping-tent.png' %}"
+                 width="38">
+            База данных туристов
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    {% for i in tourists %}
+    <div class="alert alert-secondary shadow-lg  mt-4">
+        <h3> {{i.f_name}} {{i.i_name}}</h3>
+        <p> Фамилия: {{i.f_name}}</p>
+        <p> Имя: {{i.i_name}}</p>
+        <p> Отчество: {{i.o_name}}</p>
+        <p> Дата рождения: {{i.birth}}</p>
+        <p> Состоит в лагере: {{i.camp_id}}</p>
+        <p> Инструктор туриста: {{i.instructor_id}}</p>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
