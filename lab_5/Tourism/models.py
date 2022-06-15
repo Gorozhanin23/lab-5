@@ -16,16 +16,15 @@ class Camp(models.Model):
 
 class Instructor(models.Model):
     class Meta:
-        verbose_name = "Инструктор1"
-        verbose_name_plural = "Инструкторы12345huhuhu"
+        verbose_name = "Инструктор"
+        verbose_name_plural = "Инструкторы"
 
     instructor_id = models.AutoField(verbose_name='ID инструктора', primary_key=True, unique=True)
     fio = models.CharField(verbose_name='ФИО инструктора', max_length=255)
     experience = models.IntegerField(verbose_name='Опыт работы инструктора1')
 
     def __str__(self):
-        return str(self.fio)
-
+        return f"Инструктор: {self.fio}"
 
 class Tourist(models.Model):
     class Meta:
