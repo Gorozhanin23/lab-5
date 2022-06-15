@@ -17,7 +17,7 @@ class Camp(models.Model):
 class Instructor(models.Model):
     class Meta:
         verbose_name = "Инструктор1"
-        verbose_name_plural = "Инструкторы"
+        verbose_name_plural = "Инструкторы12345"
 
     instructor_id = models.AutoField(verbose_name='ID инструктора', primary_key=True, unique=True)
     fio = models.CharField(verbose_name='ФИО инструктора', max_length=255)
