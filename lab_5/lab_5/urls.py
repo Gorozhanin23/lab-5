@@ -5,5 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Tourism.urls')),
-    path('tstpage', HttpResponse("google.com"))
+    path('tstpage', HttpResponse("yandex.ru"))
 ]
